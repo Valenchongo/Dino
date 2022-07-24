@@ -1,0 +1,63 @@
+
+
+
+#juego{
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.suelo{
+    background-color: rgb(60, 179, 113);
+    width: 500px;
+    height: 50px;
+    position: relative;
+    top: 380px;
+}
+
+#dino{
+    height: 50px;
+    width: 30px;
+    background-color: white;
+    position: relative;
+    left: 50px;
+    top:450px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+#cactus{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: 480px;
+    top:400px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    animation: animacion 1.3s infinite linear;
+
+}
+.cuerpo{
+    height: 50px ;
+    width: 14px;
+    background-color: green;
+    border-radius: 20px;
+    z-index: 2;
+}
+.brazos{
+    height: 10px;
+    width: 50px;
+    border-radius: 20px;
+    background-color: green;
+    position: relative;
+    top:13px;
+    right: 17px;
+}
+
+@keyframes animacion{
+    0%{left:500px}
+    100%{left:0px}
+}
