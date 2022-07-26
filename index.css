@@ -1,31 +1,97 @@
 
 
 
+body{
+    background-color: grey;
+    font-family:'Roboto', sans-serif;
+}
+
+
 #juego{
     height: 500px;
     width: 500px;
     background-color: black;
     margin: auto;
     margin-top: 30px;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("imagenes/sky.png");
+    border-radius: 10px;
 }
 
 .suelo{
-    background-color: rgb(60, 179, 113);
+    background-color: rgb(40, 118, 75);
     width: 500px;
     height: 50px;
     position: relative;
-    top: 380px;
+    top: 300px;
+    border-bottom: 10px;
 }
 
 #dino{
     height: 50px;
     width: 30px;
-    background-color: white;
+    background-color:#fdddca;
     position: relative;
     left: 50px;
-    top:450px;
+    top:370px;
     z-index: 1;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ojos{
+    width: 30px;
+    height: 10px;
+    
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+   
+}
+.ojo{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid black;
+    display: flex;
+}
+.ojo1{
+    margin-left: 5px;
+}
+
+.pupila{
+    border-radius: 50px;
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    align-self: center;
+    margin-left: 5px;
+}
+
+.boca{
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin-top: 10px;
+    margin-left: 5px;
+    display:flex;
+}
+.bocaabierta{
+    width: 20px;
+    height: 10px;
+    background-color:#22201f;
+    margin-top: 10px;
+    margin-left: 5px;
+    display:flex;
+    border: 2px solid black;
+    border-radius: 20px;
 }
 
 #cactus{
@@ -33,7 +99,7 @@
     width: 50px;
     position: relative;
     left: 480px;
-    top:400px;
+    top:320px;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -43,7 +109,7 @@
 .cuerpo{
     height: 50px ;
     width: 14px;
-    background-color: green;
+    background-color: rgb(23, 164, 23);
     border-radius: 20px;
     z-index: 2;
 }
@@ -51,10 +117,23 @@
     height: 10px;
     width: 50px;
     border-radius: 20px;
-    background-color: green;
+    background-color:rgb(23, 164, 23);
     position: relative;
     top:13px;
     right: 17px;
+}
+
+.contador{
+    height:50px;
+    width: 100px;
+    background-color: none  ;
+    margin-left: 400px;
+    text-align: center;
+    padding-top: 25px;
+    color: white;
+    font-size: 40px;
+    
+   
 }
 
 @keyframes animacion{
