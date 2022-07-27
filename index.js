@@ -4,11 +4,13 @@ cactus = document.getElementById("cactus");
 contador = document.querySelector(".contador");
 bocaa = document.querySelector(".bocaa");
 position_dinohorizontal = parseInt(window.getComputedStyle(dino).getPropertyValue("left"));
+sombrero = document.querySelector(".sombreropre10");
+sombreropuesto = false;
 i = 0;
 j=0;
 v=2;
 posicion_dinovertical =0;
-puntuacion = 0;
+puntuacion = 5;
 saltando = false
 
 cactus.addEventListener("animationiteration",()=>{
@@ -27,15 +29,35 @@ setInterval(() => {   //intevalo en el que evalua constantemente los cambios rea
     position_cactushorizontal = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
     position_cactusvertical = parseInt(window.getComputedStyle(cactus).getPropertyValue("top"));
     posicion_dinovertical = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+    posicion_sombrerovertical = parseInt(window.getComputedStyle(sombrero).getPropertyValue("top"));
 
     if( 80>= position_cactushorizontal && posicion_dinovertical  >= position_cactusvertical){
         alert("perdiste, tu puntuacion fue de " +puntuacion);
-
+        
+        if(sombreropuesto == true){
+          sombreropuesto = false;
+          sombrero.classList.replace("sombreropuesto","sombreropre10");
+        }
         puntuacion = -1;
         v = 2;
         
     }
-   
+ 
+if(puntuacion == 10){
+  sombrero.classList.replace("sombreropre10","sombrero");
+} 
+
+if(puntuacion == 11){
+  sombrero.classList.replace("sombrero","sombreropuesto");
+  sombreropuesto = true;
+
+}
+
+if(sombreropuesto == true){
+  console.log("culo")
+   sombrero.style.top = posicion_dinovertical-170 +"px";
+}
+
 
 if((posicion_dinovertical >= 0) && (posicion_dinovertical<=370)){
     h = posicion_dinovertical; 
