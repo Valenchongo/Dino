@@ -1,6 +1,4 @@
 
-
-
 body{
     background-color: grey;
     font-family:'Roboto', sans-serif;
@@ -46,8 +44,7 @@ body{
 
 .ojos{
     width: 30px;
-    height: 10px;
-    
+    height: 10px;  
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -136,7 +133,36 @@ body{
    
 }
 
+.sombreropre10{
+display: none;
+}
+
+.sombrero{
+    display: flex;
+    flex-direction: column; 
+    position:relative;  
+    width: 50px;
+    height: 50px;
+    top :150px;
+    animation: animacion2 1.3s infinite linear;
+}
+
+.sombreropuesto{
+    position: relative;
+    left: 49px;
+    top: 200px ;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+
+}
+
 @keyframes animacion{
     0%{left:500px}
     100%{left:0px}
+}
+
+@keyframes animacion2{
+    0%{left:580px}
+    100%{left:80px}
 }
