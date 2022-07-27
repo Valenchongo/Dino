@@ -10,7 +10,7 @@ i = 0;
 j=0;
 v=2;
 posicion_dinovertical =0;
-puntuacion = 5;
+puntuacion = 0;
 saltando = false
 
 cactus.addEventListener("animationiteration",()=>{
