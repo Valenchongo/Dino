@@ -135,6 +135,31 @@ body{
     
    
 }
+.palabrarecord{
+    height:50px;
+    width: 100px;
+    background-color: none ;
+    position: absolute;
+    margin-left: 180px;
+    text-align: center;
+    padding-top: 0;
+    color: white;
+    font-size: 15px;
+    z-index: 6;
+
+}
+.record{
+    height:10px;
+    width: 100px;
+    background-color: none  ;
+    position: absolute;
+    margin-left: 220px;
+    text-align: center;
+    padding-top: -10;
+    color: white;
+    font-size: 19px;
+    z-index: 5;
+}
 
 .sombreropre10{
 display: none;
@@ -179,40 +204,6 @@ display: flex;
     display: none;
 }
 
-.agujero{
-    display: flex;
-    width: 70px;
-    height: 150px;
-    background-color: none;
-    position: relative;
-    left:500px;
-    top:-470px;
-    animation: animacion 2s infinite linear;
-    z-index: 2;
-   
-}
-.agujeroprueba{
-    display: flex;
-    width: 70px;
-    height: 150px;
-    background-color: blue;
-    position: relative;
-    left:500px;
-    top:-815px;   
-    z-index: 2;
-   
-}
-
-
-@keyframes animacion{
-    0%{left:500px}
-    100%{left:0px}
-}
-
-@keyframes animacion2{
-    0%{left:580px}
-    100%{left:80px}
-}
 .agujero{
     display: flex;
     width: 70px;
