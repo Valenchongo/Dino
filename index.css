@@ -1,4 +1,5 @@
 
+
 body{
     background-color: grey;
     font-family:'Roboto', sans-serif;
@@ -36,7 +37,7 @@ body{
     position: relative;
     left: 50px;
     top:370px;
-    z-index: 1;
+    z-index: 3;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -129,6 +130,7 @@ body{
     padding-top: 25px;
     color: white;
     font-size: 40px;
+    z-index: 5;
     
    
 }
@@ -153,9 +155,53 @@ display: none;
     top: 200px ;
     width: 35px;
     height: 35px;
-    z-index: 1;
+    z-index: 5;
 
 }
+.tubo{
+    display:flex;
+    width: 70px;
+    height: 500px;
+    background-color: none  ;
+    position : relative;
+    left: 500px;
+    top: -164px;
+    animation: animacion 2s infinite linear;
+    
+   
+}
+.tubov{
+display: flex;
+}
+
+.displaynone{
+    display: none;
+}
+
+.agujero{
+    display: flex;
+    width: 70px;
+    height: 150px;
+    background-color: none;
+    position: relative;
+    left:500px;
+    top:-470px;
+    animation: animacion 2s infinite linear;
+    z-index: 2;
+   
+}
+.agujeroprueba{
+    display: flex;
+    width: 70px;
+    height: 150px;
+    background-color: blue;
+    position: relative;
+    left:500px;
+    top:-815px;   
+    z-index: 2;
+   
+}
+
 
 @keyframes animacion{
     0%{left:500px}
