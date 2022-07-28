@@ -13,8 +13,9 @@ i = 0;
 j=0;
 v=2;
 posicion_dinovertical =0;
-puntuacion = 0;
+puntuacion =0;
 saltando = false
+n=0;
 
 function saltar (){  //funcion salatar
   
@@ -38,7 +39,6 @@ function saltar (){  //funcion salatar
 }
 }else{
   jump = setInterval(() => {
-    console.log("ejecutando")
     h = posicion_dinovertical; 
     h = h-8;
     j++;
@@ -59,7 +59,7 @@ bujero.addEventListener("animationiteration" ,()=>{
   posicionminbujero = 670+posicionagujero;
   bujero.style.top = posicionagujero +"px";
   posagujero = bujero.style.top
-  console.log(posagujero)
+ 
   if(puntuacion>=11){
     puntuacion++
   contador.innerHTML = puntuacion;
@@ -87,7 +87,6 @@ setInterval(() => {   //intevalo en el que evalua constantemente los cambios rea
 
 
     if(sombreropuesto == false){     /*esto sucede en el game cuando no tenemos el sombrero*/ 
-    
     tubo.style.backgroundColor ="none"
     bujero.style.backgroundColor = " none"
     suelo.style.display = "flex"
@@ -96,6 +95,7 @@ setInterval(() => {   //intevalo en el que evalua constantemente los cambios rea
     if( 80>= position_cactushorizontal && posicion_dinovertical  >= position_cactusvertical){
        
       alert("perdiste, tu puntuacion fue de " +puntuacion);
+      
         
         if(puntuacion == 10){
           sombrero.classList.replace("sombrero","sombreropre10");
@@ -126,6 +126,12 @@ bocaa.classList.replace("bocaabierta","boca")
 
 }
 if(sombreropuesto == true){   /*esto sucede en el game cuando tenemos el sombrero puesto*/ 
+
+if (n == 0){
+  console.log("culo")
+  dino.style.top = "20px";
+}
+n++
   tubo.style.backgroundColor ="green"
   tubo.style.display ="flex"
   bujero.style.display = " flex"
@@ -150,6 +156,7 @@ if(sombreropuesto == true){   /*esto sucede en el game cuando tenemos el sombrer
     if( (posicionpj <= posicionmaxbujero+15 )|| (posicionpj>=posicionminbujero+20) ){
       alert("tu puntuacion es de "+puntuacion)
       puntuacion = 0;
+      n=0;
       contador.innerHTML = puntuacion;
       sombreropuesto = false;     
       tubo.style.display = "none"
@@ -158,11 +165,24 @@ if(sombreropuesto == true){   /*esto sucede en el game cuando tenemos el sombrer
           sombrero.classList.replace("sombreropuesto","sombreropre10");
           dino.style.top = 370 + "px";
     }        
-  }   
+  } 
+  
+  if(posicionpj>=380 || posicionpj <= -90){
+    alert("tu puntuacion es de "+puntuacion)
+      m = 0;
+      n=0;
+      puntuacion = 0;
+      contador.innerHTML = puntuacion;
+      sombreropuesto = false;     
+      tubo.style.display = "none"
+          bujero.style.display ="none"
+          sombreropuesto = false;
+          sombrero.classList.replace("sombreropuesto","sombreropre10");
+          dino.style.top = 370 + "px";
+  }
+
 }
    
 }, 10);
 
-juego.addEventListener("click",saltar)
-
-
+juego.addEventListener("click",saltar);
