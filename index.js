@@ -89,7 +89,8 @@ setInterval(() => {   //intevalo en el que evalua constantemente los cambios rea
     position_cactusvertical = parseInt(window.getComputedStyle(cactus).getPropertyValue("top"));
     posicion_dinovertical = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
     posicion_sombrerovertical = parseInt(window.getComputedStyle(sombrero).getPropertyValue("top"));
-    console.log(nuevorecord)
+    possombrero = parseInt(sombrero.style.top);
+    console.log(possombrero)
 
     if(sombreropuesto == false){     /*esto sucede en el game cuando no tenemos el sombrero*/ 
     tubo.style.backgroundColor ="none"
@@ -104,6 +105,7 @@ setInterval(() => {   //intevalo en el que evalua constantemente los cambios rea
         
         if(puntuacion == 10){
           sombrero.classList.replace("sombrero","sombreropre10");
+        
         }
         puntuacion = -1;
         v = 2;
@@ -113,6 +115,8 @@ setInterval(() => {   //intevalo en el que evalua constantemente los cambios rea
           nuevorecord = parseInt (divrecord.innerHTML);
         }
         record = -1;
+        sombrero.style.top = "150px"
+        dino.style.top ="370px"; 
     }
  
 if(puntuacion == 10){
@@ -150,7 +154,7 @@ n++
   leftpj = parseInt(window.getComputedStyle(dino).getPropertyValue("left"));
   lefttubo =parseInt(window.getComputedStyle(tubo).getPropertyValue("left"));
   posicionpj = parseInt(window.getComputedStyle(dino).getPropertyValue("top"))
-  sombrero.style.top = posicion_dinovertical-70 +"px";
+  sombrero.style.top = posicion_dinovertical-64 +"px";
   
   
 
@@ -172,13 +176,14 @@ n++
           bujero.style.display ="none"
           sombreropuesto = false;
           sombrero.classList.replace("sombreropuesto","sombreropre10");
-          dino.style.top = 370 + "px";
+          sombrero.style.top = "150px"
 
           if (record>=nuevorecord){
             divrecord.innerHTML = record;
             nuevorecord = parseInt (divrecord.innerHTML);
           }
           record = -1;
+          dino.style.top = "370px";
     }        
   } 
   
@@ -193,12 +198,13 @@ n++
           bujero.style.display ="none"
           sombreropuesto = false;
           sombrero.classList.replace("sombreropuesto","sombreropre10");
-          dino.style.top = 370 + "px";          
+          dino.style.top ="370px";          
           if (record>=nuevorecord){
             divrecord.innerHTML = record;
             nuevorecord = parseInt (divrecord.innerHTML);
           }
           record = -1;
+          sombrero.style.top = "150px"
   }
 
 }
@@ -206,6 +212,3 @@ n++
 }, 10);
 
 juego.addEventListener("click",saltar)
-
-
-
