@@ -211,4 +211,4 @@ n++
    
 }, 10);
 
-juego.addEventListener("click",saltar)
+juego.addEventListener("click",saltar);
