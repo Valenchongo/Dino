@@ -163,6 +163,7 @@ body{
 
 .sombreropre10{
 display: none;
+top: 150px;
 }
 
 .sombrero{
@@ -171,7 +172,7 @@ display: none;
     position:relative;  
     width: 50px;
     height: 50px;
-    top :150px;
+    top: 150px;
     animation: animacion2 1.3s infinite linear;
 }
 
